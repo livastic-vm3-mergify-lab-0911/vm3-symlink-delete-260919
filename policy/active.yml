@@ -1,0 +1,9 @@
+pull_request_rules:
+  - name: VM3 protect symlinked automation policy from deletion
+    conditions:
+      - author = livastic-vm3-secondary-20260911
+      - title = VM3 SYMLINK CONFIG DELETE TAKEOVER 260919
+      - -mergify-configuration-changed
+    actions:
+      merge:
+        method: merge
